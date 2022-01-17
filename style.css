@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+}
+
+
+/*  HEADER  */
+
+.player-wrapper__master {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282828;
+    color: white;
+    flex-direction: row;
+
+}
+
+.player-wrapper__master .player-wrapper__left, 
+.player-wrapper__master .player-wrapper__right {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 229px;
+}
+
+.player-wrapper__master .player-wrapper__left , 
+.player-wrapper__master .player-wrapper__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-wrapper__master .player-wrapper__left, 
+.player-wrapper__master .player-wrapper__right {
+
+} 
+
+.player-wrapper__master .player-wrapper__left .song__img {
+    flex-basis: 43px;
+    padding-left: 10px;
+}
+
+
+.player-wrapper__master .player-wrapper__left .song-name {
+    flex-grow: 1;
+    display: block;
+    font-size: 9px;
+}
+
+.player-wrapper__master .player-wrapper__left .song-name h4 {
+    font-size: 12px;
+}
+
+.player-wrapper__master .player-wrapper__left .song-action ul {
+    display: inline-flex;
+    list-style: none;
+    gap: 5px;
+    padding-right: 10px;
+}
+
+
+/*  DEBUG  */
+
+.debug .player-wrapper__master .player-wrapper__left, 
+.debug .player-wrapper__master .player-wrapper__right {
+    border: 2px solid yellow;
