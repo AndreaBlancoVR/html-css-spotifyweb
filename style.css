@@ -9,8 +9,12 @@ body {
     display: flex;
     flex-direction: column-reverse;
     height: 100vh;
+    color: #878787;
 }
 
+h1, h2, h3, h4, h5 {
+    color: white;
+}
 
 /*  HEADER  */
 
@@ -20,7 +24,6 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #282828;
-    color: white;
     flex-direction: row;
 
 }
@@ -29,7 +32,7 @@ body {
 .player-wrapper__master .player-wrapper__right {
     display: flex;
     justify-content: space-between;
-    flex-basis: 229px;
+    flex-basis: 230px;
 }
 
 .player-wrapper__master .player-wrapper__left , 
@@ -54,7 +57,7 @@ body {
 .player-wrapper__master .player-wrapper__left .song-name {
     flex-grow: 1;
     display: block;
-    font-size: 9px;
+    font-size: 10px;
 }
 
 .player-wrapper__master .player-wrapper__left .song-name h4 {
@@ -64,13 +67,101 @@ body {
 .player-wrapper__master .player-wrapper__left .song-action ul {
     display: inline-flex;
     list-style: none;
-    gap: 5px;
+    gap: 13px;
     padding-right: 10px;
 }
 
 
+
+/*  MAIN  */
+
+main{
+    display: flex;
+    flex-grow: 1;
+  }
+
+/* SIDE-BAR  */
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 230px;
+    flex-shrink: 0;
+    background-color: black;
+}
+
+.side-bar .widget {
+    padding-left: 15px;
+}
+
+.side-bar .widget .logo {
+    height: 84px;
+    padding-top: 15px;
+
+}
+
+.side-bar .widget .logo img {
+    width: 135px;
+    
+}
+
+.side-bar .home-wrapper {
+    
+}
+
+.side-bar .widget .widget__menu .menu-item {
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;  
+    height: 34px;
+}
+
+.side-bar .widget .widget__menu .menu-item .icon {
+    margin-right: 10px;
+    font-size: 22px;
+    vertical-align: middle;
+}
+
+.side-bar .widget .widget__menu .menu-item .icon i {
+
+}
+
+
+/*  MAIN CONTENT  */
+
+.main-container {
+    flex-grow: 1;
+    background-color: #141922;
+}
+
+
+
+
+
+
+
 /*  DEBUG  */
+
+* .debug {
+    color: rgb(235, 20, 163);
+}
 
 .debug .player-wrapper__master .player-wrapper__left, 
 .debug .player-wrapper__master .player-wrapper__right {
     border: 2px solid yellow;
+}
+
+
+.debug .side-bar .widget .logo {
+    border: 2px solid yellow;
+}
+
+.debug .side-bar .widget .home-wrapper {
+    border: 2px solid rgb(238, 13, 13);
+}
+
+.debug .side-bar .widget .playlist-wrapper__master {
+    border: 2px solid rgb(8, 235, 46);
+}
+
+
