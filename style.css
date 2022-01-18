@@ -16,9 +16,13 @@ h1, h2, h3, h4, h5 {
     color: white;
 }
 
+ul {
+    list-style-type: none;
+  }
+
 /*  HEADER  */
 
-.player-wrapper__master {
+.player-wrapper__master {   /* CONTENITORE SINISTRA  */
     height: 90px;
     display: flex;
     justify-content: space-between;
@@ -71,7 +75,35 @@ h1, h2, h3, h4, h5 {
     padding-right: 10px;
 }
 
+.player-wrapper__master .player-wrapper__central {  /* CONTENITORE CENTRO */
+    display: flex;
+    flex-direction: row;
+}
 
+.player-wrapper__master .player-wrapper__central .player-buttons {  /* CONTENITORE CENTRO */
+    display: flex;
+    flex-basis: 200px; /*  PERCHè NON VA???  */
+    width: 200px;
+    justify-content: space-between;
+
+}
+
+.player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live{
+        position: relative;
+        width: 210px;
+        height: 5px;
+        background: #cacaca;
+        border-radius: 5px;
+        
+}
+
+.player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live .bar__light-grey {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: #505050;
+        z-index: 1;
+      }
 
 /*  MAIN  */
 
@@ -88,28 +120,25 @@ main{
     flex-basis: 230px;
     flex-shrink: 0;
     background-color: black;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+.side-bar .logo {   /* LOGO  */
+    height: 84px;
+    padding-top: 15px;
+}
+
+.side-bar .logo img {
+    width: 135px;
 }
 
 .side-bar .widget {
-    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
-.side-bar .widget .logo {
-    height: 84px;
-    padding-top: 15px;
-
-}
-
-.side-bar .widget .logo img {
-    width: 135px;
-    
-}
-
-.side-bar .home-wrapper {
-    
-}
-
-.side-bar .widget .widget__menu .menu-item {
+.side-bar .widget .widget__menu .menu-item { /*MENU  */
     display: flex;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;  
@@ -117,14 +146,42 @@ main{
 }
 
 .side-bar .widget .widget__menu .menu-item .icon {
+    width: 23px;
     margin-right: 10px;
     font-size: 22px;
     vertical-align: middle;
 }
 
-.side-bar .widget .widget__menu .menu-item .icon i {
+.menu-item:hover, .menu-item.active{
+    color: #e5e5e5;
+  }
 
+.side-bar .widget .widget__title {  /*  MENU PLAYLIST  */
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 15px 0;
 }
+
+
+.side-bar .widget .playlist-creator {
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.side-bar .widget .widget__menu .menu-item .icon.new__playlist {
+    font-size: 38px;
+    margin-right: 18px;
+}
+
+.side-bar .widget .widget__menu .user-menu {  /*  USER MENU  */
+    border-bottom: 1px solid #878787; 
+}
+
+.side-bar .widget .widget__menu .user-menu h3 {
+    display: inline-block;
+}
+
+
 
 
 /*  MAIN CONTENT  */

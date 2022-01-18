@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Spotify</title>
 </head>
 <body class="">
@@ -37,14 +37,34 @@
 
         <div class="player-wrapper__central">   <!--HEADER CONTENITORE AL CENTRO-->
             <div class="player-buttons">        <!--CONTENITORE BOTTONI-->
-                bottoni
+                <div class="icon">
+                    <i class="fas fa-random"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="icon">
+                    <i class="far fa-play-circle"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-redo-alt"></i>
+                </div>
             </div>
             <div class="player-bar__master">    <!--CONTENITORE BARRA-->
                 <div class="timing-live">       <!--TIMING SINISTRA-->
                     0.25
                 </div>
                 <div class="player-bar__live">  <!--BARRA AVANZAMENTO-->
-                    barraaaaaaaaaaaaaaaaaaaaa                
+                    <div class="bar__light-grey">
+                        <div class="bar__grey">
+
+                        </div>
+
+                    </div>
+                                   
                 </div>
                 <div class="timing-left">       <!--TIMING DESTRA-->
                     4.35
@@ -70,36 +90,44 @@
 
     <main>
         <aside class="side-bar"> <!--SIDE-BAR-->
-            <div class="widget home-wrapper">
-                <div class="logo">
-                    <img src="img/logo.svg" alt="">
-                </div>
+            <div class="logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <div class="widget">
+               
                 <ul class="widget__menu">  <!--MENU HOME-->
-                    <li class="menu-item">
+                    <li class="menu-item active">
                         <div class="icon">
-                            <i class="far fa-heart"></i>
+                            <i class="fas fa-home"></i>
                         </div>
                         Home
                     </li>
                     <li class="menu-item">
                         <div class="icon">
-                            <i class="far fa-heart"></i>
+                            <i class="fas fa-search"></i>
                         </div>
                         Cerca
                     </li>
                     <li class="menu-item">
                         <div class="icon">
-                            <i class="far fa-heart"></i>
-                        </div>
+                            <i class="fas fa-swatchbook"></i>                        </div>
                         La tua libreria
                     </li>
                   </ul>
-            <div class="widget playlist-wrapper__master">
-                <h3 class="widget__title">Playlist</h3>
-                <div class="playlist-creator">
-
-                </div>
-                <ul class="widget__menu">  <!--MENU PLAYLIST-->
+            </div>
+            <div class="widget"> <!--MENU PLAYLIST-->
+                <h3 class="widget__title">Playlist</h3> 
+                
+                <ul class="widget__menu">
+                    <li class="menu-item playlist-creator">
+                        <div class="icon new__playlist">
+                            <i class="fas fa-plus-square"></i>                        </div>
+                            Crea Playlist
+                     <!--  </div>  -->
+                    </li>  
+                    <li class="menu-item">
+                        Nome playlist
+                    </li>
                     <li class="menu-item">
                         Nome playlist
                     </li>
@@ -120,7 +148,22 @@
                     </li>
                   </ul>
             </div>
-
+            <div class="widget"> <!--MENU UTENTE-->                
+                <ul class="widget__menu">
+                    <li class="menu-item user-menu">
+                        <div class="icon app-install">
+                            <i class="far fa-arrow-alt-circle-down"></i>                       </div>
+                            Installa app
+                        </div>
+                    </li>   
+                    <li class="menu-item">  <!-- HELP, DALL'ISPECTOR L'LI è FUORI DALL'UL. CI STO USCENDO PAZZO-->
+                        <div class="icon user-name">
+                            <i class="far fa-user-circle"></i>
+                            <h3>John Doe</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </aside>
       
         <section class="main-container"> <!--MAIN CONTAINER-->
