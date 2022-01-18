@@ -76,13 +76,17 @@ ul {
 }
 
 .player-wrapper__master .player-wrapper__central {  /* CONTENITORE CENTRO */
+    height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    
 }
 
 .player-wrapper__master .player-wrapper__central .player-buttons {  /* CONTENITORE CENTRO */
     display: flex;
-    flex-basis: 200px; /*  PERCHè NON VA???  */
     width: 200px;
     justify-content: space-between;
 
@@ -90,13 +94,15 @@ ul {
 
 .player-wrapper__master .player-wrapper__central .player-bar__master {
     display: flex;
+    gap: 15px;
+    
 }
 
 .player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live{
         position: relative;
         width: 210px;
         height: 5px;
-        background: #cacaca;
+        background: #505050;
         border-radius: 5px;
         
 }
@@ -105,7 +111,8 @@ ul {
         position: absolute;
         width: 50%;
         height: 100%;
-        background: #505050;
+        background: #cacaca;
+        border-radius: 5px;
         z-index: 1;
       }
 
