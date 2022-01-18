@@ -28,7 +28,7 @@ ul {
 
 /*  HEADER  */
 
-.player-wrapper__master {   /* CONTENITORE SINISTRA  */
+.player-wrapper__master {   
     height: 90px;
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,7 @@ ul {
 
 }
 
-.player-wrapper__master .player-wrapper__left, 
+.player-wrapper__master .player-wrapper__left,  /* COMMON - CONTENITORE SINISTRA E DESTRA */
 .player-wrapper__master .player-wrapper__right {
     display: flex;
     justify-content: space-between;
@@ -55,10 +55,17 @@ ul {
 
 .player-wrapper__master .player-wrapper__left, 
 .player-wrapper__master .player-wrapper__right {
-
 } 
 
-.player-wrapper__master .player-wrapper__left .song__img {
+.player-wrapper__master .player-wrapper__left .song-action ul,
+.player-wrapper__master .player-wrapper__right .tasti ul {
+    display: inline-flex;
+    list-style: none;
+    gap: 13px;
+    padding-right: 10px;
+}
+
+.player-wrapper__master .player-wrapper__left .song__img {  /* CONTENITORE SINISTRA  */
     flex-basis: 43px;
     padding-left: 10px;
 }
@@ -74,17 +81,40 @@ ul {
     font-size: 12px;
 }
 
-.player-wrapper__master .player-wrapper__left .song-action ul,
-.player-wrapper__master .player-wrapper__right .tasti ul {
-    display: inline-flex;
-    list-style: none;
-    gap: 13px;
-    padding-right: 10px;
+
+
+.player-wrapper__master .player-wrapper__right .tasti { /* CONTENITORE DESTRA  */
+    display: flex;
+    align-items: center;
 }
+
+.player-wrapper__master .player-wrapper__right .tasti .player-bar__volume{
+   display: flex;
+   flex-grow: 1;
+}
+
+.player-wrapper__master .player-wrapper__right .tasti .player-bar__volume .bar__grey {
+    display: flex;
+    position: relative;
+    width: 120px;
+    height: 3px;
+    background: #505050;
+    border-radius: 5px;    
+}
+
+.player-wrapper__master .player-wrapper__right .tasti .player-bar__volume .bar__grey .bar__light-grey {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background: #cacaca;
+    border-radius: 5px;
+    z-index: 1;
+  }
 
 
 .player-wrapper__master .player-wrapper__central {  /* CONTENITORE CENTRO */
     height: 100%;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,7 +129,12 @@ ul {
     display: flex;
     width: 200px;
     justify-content: space-between;
+    align-items: center;
+}
 
+.player-wrapper__master .player-wrapper__central .player-buttons .bigger {
+    
+    font-size: 30px;
 }
 
 .player-wrapper__master .player-wrapper__central .player-bar__master {
@@ -110,8 +145,8 @@ ul {
 
 .player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live{
         position: relative;
-        width: 210px;
-        height: 5px;
+        width: 400px;
+        height: 3px;
         background: #505050;
         border-radius: 5px;
         
