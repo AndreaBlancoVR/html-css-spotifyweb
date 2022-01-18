@@ -20,6 +20,12 @@ ul {
     list-style-type: none;
   }
 
+/*  HOVER - ACTIVE  */
+
+.menu-item:hover, .menu-item.active{
+    color: #e5e5e5;
+  }
+
 /*  HEADER  */
 
 .player-wrapper__master {   /* CONTENITORE SINISTRA  */
@@ -68,12 +74,14 @@ ul {
     font-size: 12px;
 }
 
-.player-wrapper__master .player-wrapper__left .song-action ul {
+.player-wrapper__master .player-wrapper__left .song-action ul,
+.player-wrapper__master .player-wrapper__right .tasti ul {
     display: inline-flex;
     list-style: none;
     gap: 13px;
     padding-right: 10px;
 }
+
 
 .player-wrapper__master .player-wrapper__central {  /* CONTENITORE CENTRO */
     height: 100%;
@@ -81,6 +89,8 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding: 15px;
+    gap: 5px;
     
     
 }
@@ -95,7 +105,7 @@ ul {
 .player-wrapper__master .player-wrapper__central .player-bar__master {
     display: flex;
     gap: 15px;
-    
+    align-items: center;
 }
 
 .player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live{
@@ -152,6 +162,7 @@ main{
 .side-bar .widget .widget__menu .menu-item { /*MENU  */
     display: flex;
     align-items: center;
+    
     font-family: Arial, Helvetica, sans-serif;  
     height: 34px;
 }
@@ -161,16 +172,18 @@ main{
     margin-right: 10px;
     font-size: 22px;
     vertical-align: middle;
+    line-height: 22px;
 }
 
-.menu-item:hover, .menu-item.active{
-    color: #e5e5e5;
-  }
 
 .side-bar .widget .widget__title {  /*  MENU PLAYLIST  */
     text-transform: uppercase;
     font-size: 15px;
     padding: 15px 0;
+}
+
+.side-bar .playlist-menu {
+    flex-grow: 1;
 }
 
 
@@ -185,11 +198,26 @@ main{
 }
 
 .side-bar .widget .widget__menu .user-menu {  /*  USER MENU  */
-    border-bottom: 1px solid #878787; 
+    border-bottom: 1px solid #878787;
+    margin-bottom: 20px; 
 }
 
-.side-bar .widget .widget__menu .user-menu h3 {
-    display: inline-block;
+.side-bar .widget .widget__menu .menu-item .app-install {
+    /* width: 20px;  */
+    margin-right: 10px;
+    font-size: 15px;
+    line-height: 15px;
+    vertical-align: middle;
+}
+
+.side-bar .widget .widget__menu .menu-item.user__img {
+    height: 50px;
+}
+
+.side-bar .widget .widget__menu .menu-item.user__img .icon img {
+    background-color: #505050;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 
@@ -200,6 +228,18 @@ main{
 .main-container {
     flex-grow: 1;
     background-color: #141922;
+    overflow-y: scroll;
+    position: relative;
+    padding-top: 120px;
+}
+
+.upgrade-banner {
+    min-height: 90px;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
 }
 
 

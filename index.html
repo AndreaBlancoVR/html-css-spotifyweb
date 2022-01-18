@@ -11,7 +11,7 @@
 <body class="">
     <header class="player-wrapper__master"> <!--HEADER-->
 
-        <div class="player-wrapper__left">  <!--HEADER CONTENITORE A SINISTRA-->
+        <nav class="player-wrapper__left">  <!--HEADER CONTENITORE A SINISTRA-->
 
                 <div class="song__img">
                     <img src="https://picsum.photos/350/200" alt="" width="50" height="50">
@@ -33,7 +33,7 @@
                     </ul>
                 </div>
 
-        </div>
+        </nav>
 
         <div class="player-wrapper__central">   <!--HEADER CONTENITORE AL CENTRO-->
             <div class="player-buttons">        <!--CONTENITORE BOTTONI-->
@@ -73,17 +73,20 @@
         </div>
 
         <div class="player-wrapper__right"> <!--HEADER CONTENITORE A DESTRA-->
-            <ul>
-                <li>
-                    a
-                </li>
-                <li>
-                    b
-                </li>
-                <li>
-                    c
-                </li>
-            </ul>
+            <div class="tasti">
+                <ul>
+                    <li>
+                        <i class="fas fa-bars"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-desktop"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-volume-up"></i>
+                    </li>
+                </ul>
+            </div>
+            
         </div>
 
     </header>
@@ -94,36 +97,36 @@
                 <img src="img/logo.svg" alt="">
             </div>
             <div class="widget">
-               
                 <ul class="widget__menu">  <!--MENU HOME-->
                     <li class="menu-item active">
                         <div class="icon">
-                            <i class="fas fa-home"></i>
+                            <img src="img/home.svg" alt="">
                         </div>
                         Home
                     </li>
                     <li class="menu-item">
                         <div class="icon">
-                            <i class="fas fa-search"></i>
+                            <img src="img/search.svg" alt="">
                         </div>
                         Cerca
                     </li>
                     <li class="menu-item">
                         <div class="icon">
-                            <i class="fas fa-swatchbook"></i>                        </div>
+                            <img src="img/libreria.svg" alt="">                        
+                        </div>
                         La tua libreria
                     </li>
                   </ul>
             </div>
-            <div class="widget"> <!--MENU PLAYLIST-->
+            <div class="widget playlist-menu"> <!--MENU PLAYLIST-->
                 <h3 class="widget__title">Playlist</h3> 
                 
                 <ul class="widget__menu">
                     <li class="menu-item playlist-creator">
                         <div class="icon new__playlist">
-                            <i class="fas fa-plus-square"></i>                        </div>
-                            Crea Playlist
-                     <!--  </div>  -->
+                            <i class="fas fa-plus-square"></i>                        
+                        </div>
+                        Crea Playlist
                     </li>  
                     <li class="menu-item">
                         Nome playlist
@@ -148,25 +151,30 @@
                     </li>
                   </ul>
             </div>
-            <div class="widget"> <!--MENU UTENTE-->                
-                <ul class="widget__menu">
+
+            <div class="widget">     <!--MENU UTENTE-->
+                <ul class="widget__menu">  
                     <li class="menu-item user-menu">
                         <div class="icon app-install">
-                            <i class="far fa-arrow-alt-circle-down"></i>                       </div>
-                            Installa app
+                            <img src="img/download.svg" alt="">                       
                         </div>
-                    </li>   
-                    <li class="menu-item">  <!-- HELP, DALL'ISPECTOR L'LI è FUORI DALL'UL. CI STO USCENDO PAZZO-->
-                        <div class="icon user-name">
-                            <i class="far fa-user-circle"></i>
-                            <h3>John Doe</h3>
-                        </div>
+                        Installa app
                     </li>
-                </ul>
+                    <li class="menu-item user__img"> 
+                        <div class="icon">
+                            <img src="img/profile.svg" alt="">
+                        </div>
+                        <h4>John Doe</h4>
+                    </li>
+                  </ul>
             </div>
+
         </aside>
       
         <section class="main-container"> <!--MAIN CONTAINER-->
+            <div class="upgrade-banner">
+
+            </div>
             X
             <div class="main-container__row__master">
                 x.1
