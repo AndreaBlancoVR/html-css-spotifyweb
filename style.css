@@ -88,6 +88,10 @@ ul {
 
 }
 
+.player-wrapper__master .player-wrapper__central .player-bar__master {
+    display: flex;
+}
+
 .player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live{
         position: relative;
         width: 210px;
