@@ -22,9 +22,47 @@ ul {
 
 /*  HOVER - ACTIVE  */
 
-.menu-item:hover, .menu-item.active{
-    color: #e5e5e5;
+.menu-item:hover, 
+.menu-item.active, 
+.player-wrapper__master .player-wrapper__left .song-name:hover,
+.player-wrapper__master .player-wrapper__left .song-action ul li:hover,
+.player-wrapper__master .player-wrapper__right .tasti ul li:hover {
+    color: white;
   }
+
+.player-wrapper__master .player-wrapper__central .player-buttons .bigger:hover {
+    transform: scale(1.1);
+}
+
+.player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live .bar__light-grey:hover,
+.player-wrapper__master .player-wrapper__right .tasti .player-bar__volume .bar__grey .bar__light-grey:hover {
+    background-color: yellowgreen;
+}
+
+
+.player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live .bar__light-grey:hover::after {
+    content:"";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #cfcdcd;
+    display: inline-block;
+    position: absolute;
+    left: 97%;
+    top: -4px;
+  }
+
+.player-wrapper__master .player-wrapper__right .tasti .player-bar__volume .bar__grey .bar__light-grey:hover::after {
+    content:"";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+     background: #cfcdcd;
+    display: inline-block;
+    position: absolute;
+    left: 90%;
+    top: -3px;
+}
 
 /*  HEADER  */
 
@@ -112,6 +150,7 @@ ul {
   }
 
 
+
 .player-wrapper__master .player-wrapper__central {  /* CONTENITORE CENTRO */
     height: 100%;
     color: white;
@@ -119,6 +158,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    flex-grow: 1;
     padding: 15px;
     gap: 5px;
     
@@ -133,7 +173,6 @@ ul {
 }
 
 .player-wrapper__master .player-wrapper__central .player-buttons .bigger {
-    
     font-size: 30px;
 }
 
@@ -141,25 +180,32 @@ ul {
     display: flex;
     gap: 15px;
     align-items: center;
+    width: 80%;
 }
 
 .player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live{
-        position: relative;
-        width: 400px;
-        height: 3px;
-        background: #505050;
-        border-radius: 5px;
+    position: relative;
+    width: 80%;
+    height: 3px;
+    background: #505050;
+    border-radius: 5px;
         
 }
 
 .player-wrapper__master .player-wrapper__central .player-bar__master .player-bar__live .bar__light-grey {
-        position: absolute;
-        width: 50%;
-        height: 100%;
-        background: #cacaca;
-        border-radius: 5px;
-        z-index: 1;
-      }
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #cacaca;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.player-wrapper__master .player-wrapper__central .player-bar__master {
+    font-size: 13px;
+}
+
+
 
 /*  MAIN  */
 
@@ -219,6 +265,7 @@ main{
 
 .side-bar .playlist-menu {
     flex-grow: 1;
+    overflow-y: scroll;
 }
 
 
