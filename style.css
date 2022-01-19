@@ -390,6 +390,7 @@ main{
     padding: 6px 0;
     font-size: 13px;
     font-weight: 800;
+    margin-bottom: 25px;
 }
 
 .main-container .row-master .row-album .card-wrapper {      /* MAIN CARDS  */
@@ -409,6 +410,11 @@ main{
 .main-container .row-master .row-album .card-wrapper .card-container .card-header {
     display: flex;
 
+}
+
+.main-container .row-master .row-album .card-wrapper .card-container .card-circle {
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .main-container .row-master .row-album .card-wrapper .card-container .card-header img {
