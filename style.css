@@ -71,6 +71,10 @@ ul {
 
 /*  HEADER  */
 
+header {
+    z-index: 99;
+}
+
 .player-wrapper__master {   
     height: 90px;
     display: flex;
@@ -226,6 +230,7 @@ main{
     background-color: black;
     padding-left: 15px;
     padding-right: 15px; 
+    z-index: 50;
 }
 
 .side-bar .logo {   /* LOGO  */
@@ -310,6 +315,10 @@ main{
 
 /*  MAIN CONTENT  */
 
+main {
+    height: calc(100vh - 87px);
+}
+
 .main-container {
     display: flex;
     flex-grow: 1;
@@ -341,7 +350,7 @@ main{
     font-weight: bold;
     padding: 10px 30px;
     margin-top: 24px;
-    margin-left: calc(100% - 215px)
+    margin-left: calc(100% - 230px)
 }
 
 .main-container .row-master {
