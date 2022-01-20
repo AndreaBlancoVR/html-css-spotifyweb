@@ -97,27 +97,28 @@
     <main>
         <aside class="side-bar"> <!--SIDE-BAR-->
             <div class="logo">
-                <img src="img/logo.svg" alt="">
+                <img class="logo__big" src="img/logo.svg" alt="">
+                <img class="logo__small" src="img/logo-small.svg" alt="">
             </div>
-            <div class="widget">
-                <ul class="widget__menu">  <!--MENU HOME-->
+            <div class="widget widget__home">
+                <ul class="widget__menu widget__home">  <!--MENU HOME-->
                     <li class="menu-item active">
                         <div class="icon">
                             <img src="img/home.svg" alt="">
                         </div>
-                        Home
+                        <span class="none">Home</span>
                     </li>
                     <li class="menu-item">
                         <div class="icon">
                             <img src="img/search.svg" alt="">
                         </div>
-                        Cerca
+                        <span>Cerca</span> 
                     </li>
                     <li class="menu-item">
                         <div class="icon">
                             <img src="img/libreria.svg" alt="">                        
                         </div>
-                        La tua libreria
+                        <span>La tua libreria</span> 
                     </li>
                   </ul>
             </div>
@@ -161,13 +162,15 @@
                         <div class="icon app-install">
                             <img src="img/download.svg" alt="">                       
                         </div>
-                        Installa app
+                        <span>Installa app</span>
                     </li>
                     <li class="menu-item user__img"> 
                         <div class="icon">
                             <img src="img/profile.svg" alt="">
                         </div>
-                        <h4>John Doe</h4>
+                        <span>
+                            <h4>John Doe</h4>
+                        </span>
                     </li>
                   </ul>
             </div>
