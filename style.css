@@ -10,6 +10,7 @@ body {
     flex-direction: column-reverse;
     height: 100vh;
     color: #878787;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
@@ -142,10 +143,15 @@ header {
     flex-grow: 1;
     display: block;
     font-size: 10px;
+    white-space: nowrap;
 }
 
 .player-wrapper__master .player-wrapper__left .song-name h4 {
     font-size: 12px;
+}
+
+.player-wrapper__master .player-wrapper__left .song-action ul {
+    flex-wrap: wrap;
 }
 
 
