@@ -105,7 +105,7 @@ header {
     align-items: center;
     background-color: #282828;
     flex-direction: row;
-
+    overflow-x: hidden;
 }
 
 .player-wrapper__master .player-wrapper__left,  /* COMMON - CONTENITORE SINISTRA E DESTRA */
@@ -266,6 +266,7 @@ main{
 }
 
 .side-bar .logo .logo__small {
+    width: 25px;
     display: none;
 }
 
@@ -355,6 +356,7 @@ main {
     padding-top: 90px;
     padding-left: 15px;
     padding-right: 15px;
+    overflow-x: hidden;
 }
 
 .upgrade-banner {       /* UPGRADE BANNER  */
@@ -406,6 +408,9 @@ main {
     flex-direction: row;
     gap: 15px;
     text-transform: uppercase;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main-container .row-master .row-categories ul li {
@@ -578,18 +583,13 @@ main {
     width: calc(94% / 2);
     } 
 
-    
-}
-
-@media screen and (max-width: 576px ) {
-    .main-container .row-master .row-album .card-wrapper {      
-        gap: 0;
+    .side-bar {
+        flex-basis: 0;
     }
 
-    .main-container .row-master .row-album .card-wrapper .card-container {
-    width: 100%;
-    } 
-
+    .side-bar .logo {
+        height: 55px;
+    }
 
     .side-bar .logo .logo__small {
         display: block;
@@ -617,8 +617,21 @@ main {
 
     .side-bar .widget .widget__menu .user-menu { 
         border-bottom: none;
-
+        margin-bottom: 0;
     }
+    
+}
+
+@media screen and (max-width: 576px ) {
+    .main-container .row-master .row-album .card-wrapper {      
+        gap: 0;
+    }
+
+    .main-container .row-master .row-album .card-wrapper .card-container {
+    width: 100%;
+    } 
+
+    
     
 }
 
